@@ -7,9 +7,9 @@ import org.junit.jupiter.api.*;
 import com.mongodb.MongoClient;
 
 import exceptions.DatabaseNotConnectedException;
-import testDataObjects.legion.Company;
 import testDataObjects.legion.Legion;
 import testDataObjects.legion.LegionFactory;
+import testDataObjects.legion.company.Company;
 
 
 class MongoDbReaderTest {

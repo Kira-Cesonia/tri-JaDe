@@ -1,8 +1,10 @@
-package testDataObjects.legion;
+package testDataObjects.legion.company;
 
 import java.util.List;
 
 import org.javers.core.metamodel.annotation.TypeName;
+
+import testDataObjects.legion.Legionnaire;
 
 @TypeName("Company")
 public class Company {

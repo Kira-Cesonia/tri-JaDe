@@ -21,4 +21,7 @@ dependencies {
 	//JaVers
 	compile 'org.javers:javers-core:5.10.0'
 	compile 'org.javers:javers-persistence-mongo:5.10.0'
+	
+	//java-object-diff
+	compile group: 'de.danielbechler', name: 'java-object-diff', version: '0.95'
 }

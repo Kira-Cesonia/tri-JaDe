@@ -2,6 +2,8 @@ package testDataObjects.legion;
 
 import java.util.*;
 
+import testDataObjects.legion.company.Company;
+
 public class LegionFactory {
 	public static Legion createLegion(
 		int legionId,
