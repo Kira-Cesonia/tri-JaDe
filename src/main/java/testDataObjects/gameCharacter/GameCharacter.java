@@ -8,40 +8,80 @@ import org.javers.core.metamodel.annotation.TypeName;
 @TypeName("GameCharacter")
 public class GameCharacter {
 	@Id
-	public String _id;
-	public String name;
-	public Weapon weapon;
-	public Armor armor;
-	public List<Item> inventory;
+	private String _id;
+	private String name;
+	private Weapon weapon;
+	private Armor armor;
+	private List<Item> inventory;
 	
-public GameCharacter() {
+	public GameCharacter() {
 		
 	}
 	
 	public GameCharacter(String name, Weapon weapon, Armor armor, String _id, List<Item> inventory) {
-		this._id = _id;
-		this.name = name;
-		this.weapon = weapon;
-		this.armor = armor;
-		this.inventory = inventory;
+		this.set_id(_id);
+		this.setName(name);
+		this.setWeapon(weapon);
+		this.setArmor(armor);
+		this.setInventory(inventory);
 	}
 	
 	public String toString() {
 		String returnString = "";
-		returnString += "ID: " + _id + " ";
-		returnString += "Name: " + name+ " ";
-		returnString += "Weapon: " + weapon.name
-			+ " (" + weapon.attack + " attack) ";
-		returnString += "Armor: " + armor.name
-				+ " (" + armor.defense + " defense) ";
+		returnString += "ID: " + get_id() + " ";
+		returnString += "Name: " + getName()+ " ";
+		returnString += "Weapon: " + getWeapon().getName()
+			+ " (" + getWeapon().getAttack() + " attack) ";
+		returnString += "Armor: " + getArmor().getName()
+				+ " (" + getArmor().getDefense() + " defense) ";
 		return returnString;
 	}
 	
 	public void copyValuesFrom(GameCharacter otherCharacter) {
-		_id = otherCharacter._id;
-		name = otherCharacter.name;
-		weapon = otherCharacter.weapon;
-		armor = otherCharacter.armor;
-		inventory = otherCharacter.inventory;
+		set_id(otherCharacter.get_id());
+		setName(otherCharacter.getName());
+		setWeapon(otherCharacter.getWeapon());
+		setArmor(otherCharacter.getArmor());
+		setInventory(otherCharacter.getInventory());
+	}
+
+	public String get_id() {
+		return _id;
+	}
+
+	public void set_id(String _id) {
+		this._id = _id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Weapon getWeapon() {
+		return weapon;
+	}
+
+	public void setWeapon(Weapon weapon) {
+		this.weapon = weapon;
+	}
+
+	public Armor getArmor() {
+		return armor;
+	}
+
+	public void setArmor(Armor armor) {
+		this.armor = armor;
+	}
+
+	public List<Item> getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(List<Item> inventory) {
+		this.inventory = inventory;
 	}
 }

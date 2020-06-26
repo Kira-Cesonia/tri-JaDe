@@ -6,15 +6,31 @@ import org.javers.core.metamodel.annotation.TypeName;
 @TypeName("Item")
 @BsonDiscriminator
 public abstract class Item {
-	public String name;
-	public int amount;
+	private String name;
+	private int amount;
 	
 	public Item() {
 		
 	}
 	
 	public Item(String name, int amount) {
+		this.setName(name);
+		this.setAmount(amount);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
 		this.amount = amount;
 	}
 }

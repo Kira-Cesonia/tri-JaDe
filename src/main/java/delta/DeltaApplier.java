@@ -21,7 +21,15 @@ public class DeltaApplier {
 		{
 			public void node(DiffNode node, Visit visit)
 			{
-				System.out.println(node.getPath() + " => " + node.getState());
+				final Object baseValue = node.canonicalGet(baseObject);
+				String newValueString = "unknown";
+				final String message
+					= node.getPath()
+					+ " changed from "
+					+ baseValue
+					+ " to "
+					+ newValueString ;
+				System.out.println(message);
 			}
 		});
 		return baseObject;

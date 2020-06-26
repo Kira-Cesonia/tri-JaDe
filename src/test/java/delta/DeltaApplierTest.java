@@ -36,7 +36,7 @@ class DeltaApplierTest {
 		GameCharacter sylviaWithAppliedDelta
 			= DeltaApplier.applyDelta(sylvia, sylviaDelta);
 		
-		assertEquals(sylviaEdited.name, sylviaWithAppliedDelta.name);
+		assertEquals(sylviaEdited.getName(), sylviaWithAppliedDelta.getName());
 	}
 	
 	@Test
@@ -62,6 +62,6 @@ class DeltaApplierTest {
 		GameCharacter sylviaWithAppliedDelta
 			= DeltaApplier.applyDelta(sylvia, cityDelta);
 		
-		assertEquals(sylviaEdited.name, sylviaWithAppliedDelta.name);
+		assertEquals(sylviaEdited.getName(), sylviaWithAppliedDelta.getName());
 	}
 }
